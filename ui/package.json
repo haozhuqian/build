@@ -1,0 +1,19 @@
+{
+  "name": "@yeez-ui/ui",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite-plugin-dts": "^3.6.0"
+  },
+  "dependencies": {
+    "ant-design-vue": "^4.0.3"
+  }
+}

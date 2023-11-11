@@ -1,0 +1,33 @@
+{
+  "name": "yeez-ui",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./lib/hare-ui.umd.js",
+  "types": "./lib/hare-ui/index.d.ts",
+  "module": "./lib/hare-ui.es.js",
+  "private": true,
+  "scripts": {
+    "build": "ts-node --esm ./script/build.ts",
+    "docs:dev": "pnpm run -C docs dev",
+    "docs:build": "pnpm run -C docs build",
+    "docs:preview": "pnpm run -C docs serve",
+    "new": "pnpm run -C cli gen"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.7.0",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "less": "^4.2.0",
+    "postcss-less": "^6.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.6.0",
+    "vite-plugin-mkcert": "^1.16.0",
+    "vitest": "^0.34.5",
+    "vue": "^3.3.4"
+  }
+}
