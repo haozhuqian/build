@@ -1,0 +1,151 @@
+@import '../_style/index.less';
+
+.videoPlayer {
+  position: relative;
+  width: 1209px;
+  height: 690px;
+
+  .fl_video {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c5c4c4;
+  }
+
+  .control {
+    position: absolute;
+    bottom: 30px;
+    left: 3%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 94%;
+    height: 56px;
+    background: rgb(0 0 0 / 40%);
+    border-radius: 48px;
+
+    .play {
+      img {
+        height: 25px;
+      }
+    }
+
+    .progress {
+      display: flex;
+      align-items: center;
+      margin: 0 20px;
+      width: 100%;
+
+      .slider-demo-block {
+        width: 100%;
+
+        .el-slider {
+          width: 100%;
+        }
+      }
+
+      .total_progress {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 6px;
+        background-color: #a5a5a5;
+        border-radius: 3px;
+
+        .buffer_progress {
+          position: absolute;
+          z-index: 101;
+          width: 50%;
+          height: 6px;
+          background-color: #cbcbcb;
+          border-radius: 3px;
+        }
+
+        .played_progress {
+          position: absolute;
+          z-index: 102;
+          width: 20%;
+          height: 6px;
+          background-color: #5182ff;
+          border-radius: 3px;
+        }
+
+        img {
+          position: absolute;
+          top: -6px;
+          left: 20%;
+          z-index: 103;
+          transform: translate(-50%);
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: auto;
+
+      .time {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 16px;
+
+        em {
+          padding: 0 4px;
+          font-size: 16px;
+          color: #fff;
+        }
+
+        span {
+          font-size: 13px;
+          color: #fff;
+        }
+      }
+
+      .volume {
+        position: relative;
+        margin-left: 16px;
+
+        .volume_slider {
+          position: absolute;
+          bottom: 0;
+          left: -3px;
+          display: none;
+          margin-bottom: 36px;
+
+          :deep(.el-slider__button) {
+            border: solid 2px #a5a5a5;
+          }
+        }
+
+        img {
+          width: 32px;
+          height: 32px;
+        }
+
+        &:hover {
+          .volume_slider {
+            display: block;
+          }
+        }
+      }
+
+      .fullscreen {
+        margin-left: 16px;
+
+        img {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}
+
+video::-webkit-media-controls {
+  display: none;
+}

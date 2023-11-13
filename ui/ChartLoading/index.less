@@ -1,0 +1,50 @@
+@import '../_style/index.less';
+
+.y-chart-loading {
+  /* height: 440px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* REVERSE SPINNER */
+
+  .reverse-spinner {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    border-top-color: #2fc5da;
+    border-left-color: #2fc5da;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+
+    &::before {
+      position: absolute;
+      inset: 10px;
+      border: 2px solid transparent;
+      border-top-color: #62e6f8;
+      border-left-color: #62e6f8;
+      border-radius: 50%;
+      content: '';
+      animation: spin-back 1s linear infinite;
+    }
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin-back {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-720deg);
+    }
+  }
+}

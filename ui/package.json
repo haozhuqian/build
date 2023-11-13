@@ -14,6 +14,13 @@
     "vite-plugin-dts": "^3.6.0"
   },
   "dependencies": {
-    "ant-design-vue": "^4.0.3"
+    "ant-design-vue": "^4.0.3",
+    "echarts": "^5.4.3",
+    "flv.js": "^1.6.2",
+    "video.js": "^8.6.0",
+    "videojs-contrib-hls": "^5.15.0",
+    "videojs-flash": "^2.2.1",
+    "videojs-flvjs-es6": "^1.0.1",
+    "videojs-swf": "^5.4.2"
   }
 }
